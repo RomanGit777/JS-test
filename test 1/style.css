@@ -4,3 +4,19 @@
 .containerOfList label{
     display: block;
 }
+.btn-div{
+    display: flex;
+    flex-direction: column;
+}
+.form-container{
+    width: 80%;
+    height: 90%;
+    background-color: #f1eeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.containerName-Value{
+    /*display: flex*/
+}
