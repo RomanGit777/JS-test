@@ -16,3 +16,6 @@ body{
     width: 50%;
     height: 80%;
 }
+.container label{
+    display: block;
+}
