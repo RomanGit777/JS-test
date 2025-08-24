@@ -1,7 +1,7 @@
-.form-container label{
+.container label{
     display: block;
 }
-.form-container{
+.container{
     width: 60%;
     height: 80%;
     background-color: #f1eeee;
@@ -10,7 +10,7 @@
     padding-left: 35px;
     padding-top: 50px;
 }
-.form-container h2{
+.container h2{
     padding-bottom: 25px;
 }
 .containerName-Value{
@@ -20,11 +20,12 @@ margin-bottom: 25px;
     width: 426px;
     height: 25px;
 }
-.form-container button{
+.container button{
     margin-left: 25px;
 }
-.containerOfLis button{
+.containerOfList button{
     display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
+    /*justify-content: flex-start;*/
+    /*flex-direction: column;*/
+    margin-bottom: 150px;
 }
