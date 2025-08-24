@@ -19,3 +19,10 @@ body{
 .container label{
     display: block;
 }
+
+.lower-section{
+    display: flex;
+    justify-content: space-between;
+}
+
+/*I stopped with trying different methods to separate buttons group with input group*/
