@@ -2,16 +2,13 @@
     display: block;
 }
 .form-container{
-    width: 80%;
-    height: 90%;
+    width: 60%;
+    height: 80%;
     background-color: #f1eeee;
     display: flex;
     justify-content: flex-start;
     padding-left: 35px;
     padding-top: 50px;
-    /*justify-content: center;*/
-    /*align-items: center;*/
-    /*flex-direction: column;*/
 }
 .form-container h2{
     padding-bottom: 25px;
@@ -19,6 +16,15 @@
 .containerName-Value{
 margin-bottom: 25px;
 }
+.containerName-Value input{
+    width: 426px;
+    height: 25px;
+}
 .form-container button{
     margin-left: 25px;
+}
+.containerOfLis button{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
 }
