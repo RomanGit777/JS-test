@@ -24,50 +24,50 @@ html, body {
 
 
 
-a {
+/*a {*/
 
-    text-decoration: none;
+/*    text-decoration: none;*/
 
-    color: inherit;
+/*    color: inherit;*/
 
-}
-
-
-
-ul, ol {
-
-    list-style: none;
-
-}
+/*}*/
 
 
 
-table {
+/*ul, ol {*/
 
-    border-collapse: collapse;
+/*    list-style: none;*/
 
-    border-spacing: 0;
-
-}
+/*}*/
 
 
 
-button {
+/*table {*/
 
-    /*border: none;*/
+/*    border-collapse: collapse;*/
 
-    /*background: none;*/
+/*    border-spacing: 0;*/
 
-    cursor: pointer;
-
-}
+/*}*/
 
 
 
-img {
+/*button {*/
 
-    max-width: 100%;
+/*    !*border: none;*!*/
 
-    height: auto;
+/*    !*background: none;*!*/
 
-}
+/*    cursor: pointer;*/
+
+/*}*/
+
+
+
+/*img {*/
+
+/*    max-width: 100%;*/
+
+/*    height: auto;*/
+
+/*}*/

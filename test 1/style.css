@@ -7,16 +7,15 @@
     background-color: #f1eeee;
     display: flex;
     justify-content: flex-start;
-    padding-left: 35px;
-    padding-top: 50px;
+    padding: 50px 35px;
 }
 .container h2{
     padding-bottom: 25px;
 }
-.containerName-Value{
+.input-section{
 margin-bottom: 25px;
 }
-.containerName-Value input{
+.input-section input{
     width: 426px;
     height: 25px;
 }
@@ -24,8 +23,5 @@ margin-bottom: 25px;
     margin-left: 25px;
 }
 .containerOfList button{
-    display: flex;
-    /*justify-content: flex-start;*/
-    /*flex-direction: column;*/
     margin-bottom: 150px;
 }
