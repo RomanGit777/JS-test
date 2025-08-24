@@ -6,7 +6,7 @@
     height: 80%;
     background-color: #f1eeee;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     padding: 50px 35px;
 }
 .container h2{
