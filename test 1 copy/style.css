@@ -41,9 +41,25 @@ body{
     justify-content: space-between;
     font-size: 18px;
 }
-.lower-section textarea{
+.lower-section textarea {
     width: 421px;
     height: 353px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    font-family: monospace;
+    padding: 8px;
+    resize: none;
+    cursor: text;
+    line-height: 1.5;
+    white-space: pre;
+}
+textarea:focus {
+    outline: none;
+    border-color: #6699cc;
+    box-shadow: 0 0 5px rgba(102, 153, 204, 0.5);
+}
+#list{
+
 }
 .buttons-group{
     display: flex;
