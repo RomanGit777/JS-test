@@ -1,4 +1,4 @@
-@media screen and (min-width: 0) and (max-width: 480px) {
+@media screen and (min-width: 481px) and (max-width: 768px) {
     .container{
         justify-content: center;
         width: 100%;
@@ -12,9 +12,6 @@
     h2{
         text-align: center;
         font-size: 28px;
-    }
-    #btn-add{
-        margin-top: 5px
     }
     .first-input,
     .containerOfList{
@@ -37,9 +34,11 @@
     .form button {
         width: 100%;
         font-size: 14px;
-        /*padding: 10px;*/
+        padding: 10px;
         margin: 0;
         height: 35px;
     }
+
+
 
 }
