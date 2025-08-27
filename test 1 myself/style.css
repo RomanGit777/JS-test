@@ -56,7 +56,6 @@ body{
     display: flex;
     flex-direction: column;
     gap: 15px;
-    margin-left: 40px;
     }
 .form button{
     background: linear-gradient(to bottom, #e0e0e0, #cfcfcf);
