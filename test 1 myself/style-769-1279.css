@@ -1,0 +1,52 @@
+@media screen and (min-width: 769px) and (max-width: 1279px){
+    .container{
+        width: 60%;
+        height: auto;
+    }
+    .form{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 20px;
+        align-items: stretch;
+    }
+    h2{
+        text-align: center;
+        font-size: 35px;
+    }
+    .first-input,
+    .containerOfList{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+    }
+    .first-input input,
+    .containerOfList textarea{
+        width: 100%;
+    }
+    .first-input input{
+        height: 30px;
+    }
+    .containerOfList textarea{
+        height: 150px;
+    }
+    #btn-add{
+        margin-top: 10px
+    }
+    .containerOfList>.btn-group{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+    .form button {
+        width: 100%;
+        font-size: 14px;
+        margin: 0;
+        height: 35px;
+    }
+
+
+}
