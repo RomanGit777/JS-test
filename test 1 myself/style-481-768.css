@@ -25,15 +25,20 @@
     .containerOfList textarea{
         width: 100%;
     }
+    .first-input input{
+        height: 30px;
+    }
     .containerOfList textarea{
-        height: 150px;
+        height: 180px;
     }
     #btn-add{
-        margin-top: 5px
+        margin-top: 10px
     }
-    #lower-btn{
-        width: 30%;
-
+    .containerOfList>.btn-group{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        margin-top: 15px;
     }
     .form button {
         width: 100%;
