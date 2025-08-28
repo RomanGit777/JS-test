@@ -1,8 +1,8 @@
 const input = document.getElementById('name=value');
 const topBtn = document.getElementById('btn-add');
 const list = document.getElementById('list');
-const sbnBtn = document.getElementById('sbnBtn');
-const sbvBtn = document.getElementById('sbvBtn');
+const btnSortName = document.getElementById('sbnBtn');
+const btnSortValue = document.getElementById('sbvBtn');
 const deleteBtn = document.getElementById('deleteBtn');
 
 let pairs = [];
@@ -21,5 +21,12 @@ topBtn.onclick = (ev) => {
         return;
     }
 
+    pairs.push(raw);
+    updateTextarea();
+    input.value = "";
+}
 
+// Update textarea content
+function updateTextarea() {
+    list.value = pairs.join("\n");
 }
