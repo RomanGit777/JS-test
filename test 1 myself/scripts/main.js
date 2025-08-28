@@ -26,11 +26,22 @@ topBtn.onclick = function (ev) {
     input.value = "";
 }
 
-btnSortName.onclick = function () {
+btnSortName.onclick = function (ev) {
+    ev.preventDefault();
     pairs.sort((a, b) => {
     const nameA = a.split("=")[0].toLowerCase();
     const nameB = b.split("=")[0].toLowerCase();
     return nameA.localeCompare(nameB);
+    });
+    updateTextarea();
+};
+
+btnSortValue.onclick = function (ev) {
+    ev.preventDefault();
+    pairs.sort((a, b) => {
+        const valA = a.split("=")[1].toLowerCase();
+        const valB = b.split("=")[1].toLowerCase();
+        return valA.localeCompare(valB);
     });
     updateTextarea();
 };
