@@ -7,7 +7,7 @@ const deleteBtn = document.getElementById('deleteBtn');
 
 let pairs = [];
 
-topBtn.onclick = (ev) => {
+topBtn.onclick = function (ev) {
     ev.preventDefault();
     let raw = input.value.trim(); // here we delete leading and trailing spaces from value of input
 
@@ -25,6 +25,15 @@ topBtn.onclick = (ev) => {
     updateTextarea();
     input.value = "";
 }
+
+btnSortName.onclick = function () {
+    pairs.sort((a, b) => {
+    const nameA = a.split("=")[0].toLowerCase();
+    const nameB = b.split("=")[0].toLowerCase();
+    return nameA.localeCompare(nameB);
+    });
+    updateTextarea();
+};
 
 // Update textarea content
 function updateTextarea() {
