@@ -46,6 +46,30 @@ btnSortValue.onclick = function (ev) {
     updateTextarea();
 };
 
+deleteBtn.onclick = function (ev) {
+    ev.preventDefault();
+    const start = list.selectionStart;
+    const end = list.selectionEnd;
+    const lines = list.value.split("\n");
+    let currentPos = 0;
+    const selectedIndexes = [];
+    for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        const lineStart = currentPos;
+        const lineEnd = currentPos + line.length;
+
+        if (lineEnd >= start && lineStart <= end) {
+            selectedIndexes.push(i);
+        }
+        currentPos += line.length + 1;
+    }
+    for (let i = selectedIndexes.length - 1; i >= 0; i--) {
+        pairs.splice(selectedIndexes[i], 1);
+    }
+    updateTextarea();
+}
+
+
 // Update textarea content
 function updateTextarea() {
     list.value = pairs.join("\n");
