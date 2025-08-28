@@ -1,40 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-  <link rel="stylesheet"
-        href="style.css">
-  <link rel="stylesheet"
-        href="rest.css">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible"
+          content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet"
+          href="style.css">
+    <link rel="stylesheet"
+          href="style-0-480.css">
+    <link rel="stylesheet"
+          href="style-481-768.css">
+    <link rel="stylesheet"
+          href="style-769-1279.css">
+    <link rel="stylesheet"
+          href="style-1280+.css">
 </head>
 <body>
 
+<div class="container">
 
-<div  class="container">
-<form>
-<h2>Test</h2>
+    <form class="form">
+        <h2>Test</h2>
 
-    <div class="input-section">
-        <label for="name-value"> Name/Value Pair</label>
-        <input type="text" id="name-value" placeholder="Name=Value">
-        <button>Add</button>
-    </div>
+        <div class="first-input">
+        <div class="input-section">
+            <label for="name=value"> Name/Value Pair </label>
+            <input type="text" id="name=value" placeholder="Name=Value">
+        </div>
+            <button id="btn-add">Add</button>
+        </div>
 
-    <div class="list-section">
-        <label for="pair-List"> Name/Value Pair List </label>
-        <textarea id="pair-List" rows="18" cols="55"></textarea>
-    </div>
+        <div class="containerOfList">
+        <div class="list-section">
+            <label for="list"> Name/Value Pair List </label>
+            <textarea id="list" readonly></textarea>
+        </div>
+            <div class="btn-group" id="lower-btn">
+            <button id="sbnBtn">Sort by Name</button>
+            <button id="sbvBtn">Sort by Value</button>
+            <button id="deleteBtn">Delete</button>
+            </div>
+        </div>
 
-    <div class="button-group">
-        <button>Sort by Name</button>
-        <button>Sort by Value</button>
-        <button>Delete</button>
-    </div>
+    </form>
 
-</form>
 </div>
 
 <script src="scripts/main.js"></script>
+
 </body>
 </html>
