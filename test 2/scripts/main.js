@@ -4,7 +4,9 @@ fetch('https://jsonplaceholder.typicode.com/users')
     const container = document.getElementById('container')
     for (const {name, id} of data) {
     const userInfo = document.createElement("div");
-        userInfo.innerText = `Id: ${id} Name: ${name}`
+    userInfo.classList.add("userInfo");
+        userInfo.innerText = `Id: ${id} 
+        Name: ${name}`
     container.appendChild(userInfo);
     }
     document.body.appendChild(container);

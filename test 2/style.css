@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+}
+#container{
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.userInfo{
+    width: 35%;
+    height: 30%;
+    border: 2px solid #c8c8c8;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: #292828;
+    padding-top: 25px;
+}
