@@ -14,7 +14,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
         btn.classList.add("btn");
         btn.innerText = "View information"
     btn.addEventListener('click', () => {
-        window.location.href = 'user-details.html';
+        window.location.href = `user-details.html?id=${id}`;
     });
 
 
