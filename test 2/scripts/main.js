@@ -11,9 +11,15 @@ fetch('https://jsonplaceholder.typicode.com/users')
     const btn = document.createElement("button");
         btn.classList.add("btn");
         btn.innerText = "View information"
+    btn.addEventListener('click', () => {
+        window.location.href = 'user-details.html';
+    });
+
+
         userInfo.appendChild(btn);
     container.append(userInfo);
     }
+
     document.body.appendChild(container);
 });
 
