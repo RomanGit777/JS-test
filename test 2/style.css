@@ -23,8 +23,8 @@ body{
     align-items: center;
     flex-wrap: wrap;
     color: #292828;
-    gap: 15px;
     flex-direction: column;
+    gap: 5px;
 }
 .userInfo .btn{
     width: 200px;

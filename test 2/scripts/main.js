@@ -5,9 +5,11 @@ fetch('https://jsonplaceholder.typicode.com/users')
     for (const {name, id} of data) {
     const userInfo = document.createElement("div");
     userInfo.classList.add("userInfo");
-        userInfo.innerText = `Id: ${id} 
-        Name: ${name}
-        `
+    const p = document.createElement("p");
+    p.innerText = `Id: ${id}`;
+    const h3 = document.createElement("h3");
+    h3.innerText = `Name: ${name}`
+
     const btn = document.createElement("button");
         btn.classList.add("btn");
         btn.innerText = "View information"
@@ -16,10 +18,9 @@ fetch('https://jsonplaceholder.typicode.com/users')
     });
 
 
-        userInfo.appendChild(btn);
+        userInfo.append(p, h3, btn);
     container.append(userInfo);
     }
 
-    document.body.appendChild(container);
 });
 
