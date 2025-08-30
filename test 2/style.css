@@ -20,7 +20,16 @@ body{
     border: 2px solid #c8c8c8;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     color: #292828;
-    padding-top: 25px;
+    gap: 15px;
+    flex-direction: column;
+}
+.userInfo .btn{
+    width: 200px;
+    height: 25px;
+    color: #3c3a3a;
+    border-radius: 10px;
+    border: #373737 1px solid;
 }

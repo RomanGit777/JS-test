@@ -6,8 +6,13 @@ fetch('https://jsonplaceholder.typicode.com/users')
     const userInfo = document.createElement("div");
     userInfo.classList.add("userInfo");
         userInfo.innerText = `Id: ${id} 
-        Name: ${name}`
-    container.appendChild(userInfo);
+        Name: ${name}
+        `
+    const btn = document.createElement("button");
+        btn.classList.add("btn");
+        btn.innerText = "View information"
+        userInfo.appendChild(btn);
+    container.append(userInfo);
     }
     document.body.appendChild(container);
 });
