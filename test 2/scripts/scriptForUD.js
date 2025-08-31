@@ -4,9 +4,26 @@ const userId = urlParams.get("id");
 fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
 .then(res => res.json())
 .then(user => {
-    for (const key in user) {
-        const p = document.createElement("p");
-        p.innerText = `${key}: ${JSON.stringify((user[key]))}`;
-        container.appendChild(p);
+    function showObject(obj, parent){
+        for (const key in obj) {
+            const value = obj[key];
+            const p = document.createElement("p");
+
+            if (typeof value === "object" && value !== null){
+                const title = document.createElement("p");
+                title.innerText = `${key}:`;
+                parent.appendChild(title);
+
+                const nestedDiv = document.createElement("div");
+                nestedDiv.style.marginLeft = '20px';
+                parent.appendChild(nestedDiv);
+
+                showObject(value, nestedDiv);
+            } else{
+                p.innerText = `${key}: ${value}`;
+                parent.appendChild(p);
+            }
+        }
     }
-})
+    showObject(user, container);
+});
