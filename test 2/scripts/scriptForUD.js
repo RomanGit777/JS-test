@@ -1,7 +1,7 @@
-const container = document.getElementById("info-container"); // take our html element
-const urlParams = new URLSearchParams(window.location.search); // can you explain me here?
-const userId = urlParams.get("id"); // can you explain me here?
-fetch(`https://jsonplaceholder.typicode.com/users/${userId}`) //can you explain me more about ${this}?
+const container = document.getElementById("info-container");
+const urlParams = new URLSearchParams(window.location.search);
+const userId = urlParams.get("id");
+fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
 .then(res => res.json())
 .then(user => {
     function showObject(obj, parent){
@@ -15,7 +15,7 @@ fetch(`https://jsonplaceholder.typicode.com/users/${userId}`) //can you explain 
                 parent.appendChild(title);
 
                 const nestedDiv = document.createElement("div");
-                nestedDiv.style.marginLeft = '20px';
+                // nestedDiv.style.marginLeft = '20px';
                 parent.appendChild(nestedDiv);
 
                 showObject(value, nestedDiv);
@@ -26,4 +26,10 @@ fetch(`https://jsonplaceholder.typicode.com/users/${userId}`) //can you explain 
         }
     }
     showObject(user, container);
+            const btn = document.createElement("button");
+            btn.innerText = 'Post Of Current User';
+            btn.addEventListener('click', () => {
+                window.location.href = `post-details.html?id=${userId}`;
+            });
+            container.appendChild(btn);
 });
