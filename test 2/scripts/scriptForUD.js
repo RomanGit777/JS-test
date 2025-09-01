@@ -29,7 +29,11 @@ fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
             const btn = document.createElement("button");
             btn.innerText = 'Post Of Current User';
             btn.addEventListener('click', () => {
-                window.location.href = `post-details.html?id=${userId}`;
+                fetch(`https://jsonplaceholder.typicode.com/posts/${userId}`)
+                    .then(res => res.json())
+                    .then(posts => {
+                        container.appendChild(posts);
+                    })
             });
             container.appendChild(btn);
 });
