@@ -1,7 +1,7 @@
-const container = document.getElementById("info-container");
-const urlParams = new URLSearchParams(window.location.search);
-const userId = urlParams.get("id");
-fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
+const container = document.getElementById("info-container"); // take our html element
+const urlParams = new URLSearchParams(window.location.search); // can you explain me here?
+const userId = urlParams.get("id"); // can you explain me here?
+fetch(`https://jsonplaceholder.typicode.com/users/${userId}`) //can you explain me more about ${this}?
 .then(res => res.json())
 .then(user => {
     function showObject(obj, parent){
