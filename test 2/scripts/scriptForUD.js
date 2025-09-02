@@ -15,7 +15,6 @@ fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
                 parent.appendChild(title);
 
                 const nestedDiv = document.createElement("div");
-                // nestedDiv.style.marginLeft = '20px';
                 parent.appendChild(nestedDiv);
 
                 showObject(value, nestedDiv);
@@ -26,14 +25,35 @@ fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
         }
     }
     showObject(user, container);
+
             const btn = document.createElement("button");
+            btn.classList.add("top-btn");
             btn.innerText = 'Post Of Current User';
             btn.addEventListener('click', () => {
-                fetch(`https://jsonplaceholder.typicode.com/posts/${userId}`)
+                fetch(`https://jsonplaceholder.typicode.com/users/${userId}/posts`)
                     .then(res => res.json())
                     .then(posts => {
-                        container.appendChild(posts);
-                    })
+                        const postsContainer = document.createElement('div');
+                        postsContainer.classList.add('posts-container');
+
+                        posts.forEach(post =>{
+                            const postDiv = document.createElement("div");
+                                postDiv.classList.add("post");
+
+                    const title = document.createElement("h4");
+                            title.innerText = post.title;
+
+                            const btnVP = document.createElement("button");
+                            btnVP.classList.add("bottom-btn");
+                            btnVP.innerText = "View Post";
+                            btnVP.addEventListener('click', () =>{
+                                window.location.href = `post-details.html?id=${post.id}`;
+                            });
+                                postDiv.append(title, btnVP);
+                                postsContainer.appendChild(postDiv);
+                        });
+                                container.appendChild(postsContainer);
+                    });
             });
             container.appendChild(btn);
 });
