@@ -50,7 +50,6 @@ deleteBtn.onclick = function (ev) {
     const start = list.selectionStart;
     const end = list.selectionEnd;
 
-    // якщо нічого не виділено
     if (start === end) {
         alert("Please select a line to delete!");
         return;
@@ -82,7 +81,7 @@ deleteBtn.onclick = function (ev) {
 function updateTextarea() {
     list.value = pairs.join("\n");
     list.addEventListener("click", () => {
-        const start = list.selectionStart; // позиція курсора
+        const start = list.selectionStart;
         const text = list.value;
         const lines = text.split("\n");
 
