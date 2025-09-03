@@ -27,7 +27,7 @@ fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
                     commentDiv.innerHTML = `
                         <h4>${comment.name}</h4>
                         <p><b>Email:</b> ${comment.email}</p>
-                        <p>${comment.body}</p>
+                        <p>Comment: ${comment.body}</p>
                     `;
                     commentsContainer.appendChild(commentDiv);
                 });

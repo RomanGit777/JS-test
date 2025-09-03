@@ -32,4 +32,5 @@ body{
     color: #3c3a3a;
     border-radius: 10px;
     border: #373737 1px solid;
+    cursor: pointer;
 }
