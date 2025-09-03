@@ -46,11 +46,20 @@ btnSortValue.onclick = function (ev) {
 
 deleteBtn.onclick = function (ev) {
     ev.preventDefault();
+
     const start = list.selectionStart;
     const end = list.selectionEnd;
+
+    // якщо нічого не виділено
+    if (start === end) {
+        alert("Please select a line to delete!");
+        return;
+    }
+
     const lines = list.value.split("\n");
     let currentPos = 0;
     const selectedIndexes = [];
+
     for (let i = 0; i < lines.length; i++) {
         const line = lines[i];
         const lineStart = currentPos;
@@ -61,13 +70,35 @@ deleteBtn.onclick = function (ev) {
         }
         currentPos += line.length + 1;
     }
+
     for (let i = selectedIndexes.length - 1; i >= 0; i--) {
         pairs.splice(selectedIndexes[i], 1);
     }
+
     updateTextarea();
 }
 
 
 function updateTextarea() {
     list.value = pairs.join("\n");
+    list.addEventListener("click", () => {
+        const start = list.selectionStart; // позиція курсора
+        const text = list.value;
+        const lines = text.split("\n");
+
+        let currentPos = 0;
+        for (let i = 0; i < lines.length; i++) {
+            const line = lines[i];
+            const lineStart = currentPos;
+            const lineEnd = currentPos + line.length;
+
+            if (start >= lineStart && start <= lineEnd) {
+                list.selectionStart = lineStart;
+                list.selectionEnd = lineEnd;
+                break;
+            }
+            currentPos += line.length + 1;
+        }
+    });
+
 }
