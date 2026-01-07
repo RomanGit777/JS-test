@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background: #f9f9f9;
+    padding: 20px;
+}
+
+#info-container {
+    width: 80%;
+    background: #fff;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#info-container p {
+    margin: 4px 0;
+    color: #333;
+    line-height: 1.4;
+}
+
+#info-container > div > p {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#info-container .top-btn {
+    width: 90%;
+    display: block;
+    margin: 20px auto;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    background: #5a8e5c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.posts-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.post {
+    flex: 0 0 calc(20% - 15px); /* 100% / 5 = 20% */
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: #f9f9f9;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+}
+.bottom-btn{
+    width: 80%;
+    margin-top: auto; /* Pushes button to bottom if needed */
+    align-self: center;
+    text-align: center;
+    cursor: pointer;
+}
